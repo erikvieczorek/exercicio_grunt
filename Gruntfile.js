@@ -57,6 +57,10 @@ module.exports = function(grunt) {
                         {
                             match: 'ENDERECO_DO_JS',
                             replacement: '../src/scripts/main.js'
+                        },
+                        {
+                            match: '/ENDERECO_DAS_IMAGENS/', // Padrão a ser substituído
+                            replacement: './images/' // Novo caminho para imagens no desenvolvimento
                         }
                     ]
                 },
@@ -79,6 +83,10 @@ module.exports = function(grunt) {
                         {
                             match: 'ENDERECO_DO_JS',
                             replacement: './scripts/main.min.js'
+                        },
+                        {
+                            match: '/ENDERECO_DAS_IMAGENS/', 
+                            replacement: './images/' 
                         }
                     ]
                 },
@@ -125,3 +133,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'clean', 'uglify', 'imagemin']);
 }
+
+
+
+
