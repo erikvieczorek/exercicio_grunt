@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
     grunt.initConfig ({
         pkg: grunt.file.readJSON('package.json'),
+        
         less: {
             development: {
                 files: [{
@@ -24,18 +25,19 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        imagemin: {
+
+        image: {
+            
             dynamic: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: "src/images",
-                        src: ["**/*.*"],
-                        dest: "dist/images",
-                    },
-                ],
-            },
+                files: [{
+                expand: true,
+                cwd: 'src/images',
+                src: ['**/*.{png,jpg,gif,svg,jpeg}'],
+                dest: 'dist/images'
+                }]
+            }
         },
+
         watch: {
             less: {
                 files: ['src/styles/**/*.less'],
@@ -46,6 +48,7 @@ module.exports = function(grunt) {
                 tasks: ['replace:dev']
             }
         },
+
         replace: {
             dev: {
                 options: {
@@ -59,8 +62,8 @@ module.exports = function(grunt) {
                             replacement: '../src/scripts/main.js'
                         },
                         {
-                            match: '/ENDERECO_DAS_IMAGENS/', // Padrão a ser substituído
-                            replacement: './images/' // Novo caminho para imagens no desenvolvimento
+                            match: '/ENDERECO_DAS_IMAGENS/', 
+                            replacement: './images/' 
                         }
                     ]
                 },
@@ -100,6 +103,7 @@ module.exports = function(grunt) {
                 ]
             }
         },
+
         htmlmin: {
             dist: {
                 options: {
@@ -111,7 +115,9 @@ module.exports = function(grunt) {
                 }
             }
         },
-        clean: ['prebuild'],
+
+        clean: ['prebuild', 'jpgtmp.jpg'],
+
         uglify: {
             target: {
                 files: {
@@ -127,11 +133,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-image');
 
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'clean', 'uglify', 'imagemin']);
+    grunt.registerTask('build', ['less:production', 'image', 'htmlmin:dist', 'replace:dist', 'clean', 'uglify']);
 }
 
 
