@@ -1,7 +1,11 @@
-
 @import "variables.less";
-@import "mixins.less";
 @import "layout.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: #fonts[fontPrimary];
@@ -15,21 +19,6 @@ header img {
     width: 75px;
 }
 
-#cabecalho .nav .nav-link.active {
-    background-color: #colors[textColor2];
-    color: #colors[colorPrimary];
-}
-
-#cabecalho .nav .nav-link {
-    .link-styles();
-}
-
-.navbar-brand,
-.navbar-brand:hover,
-.nav-produtos .nav-link.active:hover {
-    .link-styles();
-}
-
 .navbar-toggler {
     background-color: #colors[colorSecondary];
     color: #colors[textColor1];
@@ -41,11 +30,16 @@ header img {
 }
 
 #sobre-a-loja, #produtos {
-    background-color: #colors[backgroudLight];
+    background-color: #colors[backgroudMid];
+}
+
+.products-item-img {
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 #usos, #fale-conosco {
-    background-color: #colors[backgroudMid];
+    background-color: #colors[backgroudLight];
 }
 
 .text-colored {
@@ -56,13 +50,8 @@ header img {
     color: #colors[textColor2];
 }
 
-.nav-link.active,
-#fale-conosco button {
-    .button-styles();
-}
-
-.nav-produtos {
-    .link-styles()
+.text-colored3 {
+    color: #colors[textColor3];
 }
 
 .social-links li {
@@ -81,6 +70,37 @@ label.error {
 }
 
 #carousel img {
+    display: block;
     width: 100%;
-    height: 400px;
+    height: 300px;
+    margin: 0 auto;
+
+}
+
+#rodape {
+    background-color: #colors[colorPrimary];
+    color: #colors[textColor1];
+}
+
+.nav-link {
+    color: #colors[textColor1];
+    
+    &:hover {
+        color: #colors[textColor2];
+    }
+}
+
+.nav-pills .nav-link.active {
+    background-color: #colors[backgroudLight];
+    color: #colors[textColor3];
+}
+
+.btn-primary {
+    background-color: #colors[textColor1];
+    color: #colors[backgroudMid];
+    border: none;
+
+        &:hover {
+            background-color: #colors[textColor2];
+        }
 }

@@ -41,11 +41,11 @@ module.exports = function(grunt) {
         watch: {
             less: {
                 files: ['src/styles/**/*.less'],
-                tasks: ['less:development']
+                tasks: ['less']
             },
             html: {
-                files: [ 'src/index.html'],
-                tasks: ['replace:dev']
+                files: ['src/index.html'],
+                tasks: ['htmlmin:dist', 'replace']
             }
         },
 
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
             }
         },
 
-        clean: ['prebuild', 'jpgtmp.jpg'],
+        //clean: ['prebuild', 'jpgtmp.jpg'],
 
         uglify: {
             target: {
@@ -137,7 +137,7 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', 'image', 'htmlmin:dist', 'replace:dist', 'clean', 'uglify']);
+    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'uglify']);
 }
 
 

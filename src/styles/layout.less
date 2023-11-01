@@ -2,29 +2,32 @@
 
 
 .products-item {
-    flex: 100%;
+    flex: 0 0 25%;
     max-width: 100%;
-
-        @media (min-width: @breakpoint-md) {
-            flex: 0 0 33%;
-            max-width: 33%;        
-        }
-
-        @media (min-width: @breakpoint-lg) {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-
+    
         img {
-            display: block;
-            width: 100%;
-            margin-bottom: 1rem;
+            max-width: 100%;
+        }
+
+        @media (max-width: @breakpoint-lg) {
+            flex: 0 0 33%;
+        }
+
+        @media (max-width: @breakpoint-sm) {
+            flex: 0 0 50%;
+        }
+
+        @media (max-width: @breakpoint-xs) {
+            flex: 0 0 100%;
+
+            img {
+                max-width: 50%;
+            }
         }
 }
 
-
-.carousel-item img {
-    @media (min-width: @breakpoint-xs) {
-        height: 280px;
+#contato {
+    @media (max-width: @breakpoint-sm) {
+        margin-bottom: 30px;
     }
 }
