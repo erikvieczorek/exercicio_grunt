@@ -116,7 +116,7 @@ module.exports = function(grunt) {
             }
         },
 
-        //clean: ['prebuild', 'jpgtmp.jpg'],
+        clean: ['prebuild', 'jpgtmp.jpg'],
 
         uglify: {
             target: {
@@ -137,7 +137,7 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'uglify']);
+    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'image', 'replace:dist', 'uglify']);
 }
 
 
