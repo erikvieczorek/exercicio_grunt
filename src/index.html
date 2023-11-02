@@ -54,16 +54,16 @@
             <div class="carousel slide"  data-bs-ride="carousel" id="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="3000">
-                        <source media="(max-width: 576px)" srcset="@@/ENDERECO_DAS_IMAGENS/slides/Slide(1)xs.jpg"/>
-                        <img src="@@/ENDERECO_DAS_IMAGENS/slides/Slide(1).jpg" alt="Óleo essencial">
+                        <img src="@@/ENDERECO_DAS_IMAGENS/slides/Slide(1).jpg" alt="Kit">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
-                        <source media="(max-width: 576px)" srcset="@@/ENDERECO_DAS_IMAGENS/slides/Slide(2)xs.jpg"/>
-                        <img src="@@/ENDERECO_DAS_IMAGENS/slides/Slide(2).jpg"  alt="Óleo essencial">
+                        <img src="@@/ENDERECO_DAS_IMAGENS/slides/Slide(3).jpg"  alt="Etiqueta">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
-                        <source media="(max-width: 576px)" srcset="@@/ENDERECO_DAS_IMAGENS/slides/Slide(3)xs.jpg"/>
-                        <img src="@@/ENDERECO_DAS_IMAGENS/slides/Slide(3).jpg"  alt="Óleo essencial">
+                        <img src="@@/ENDERECO_DAS_IMAGENS/slides/Slide(2).jpg"  alt="Água lençol">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="@@/ENDERECO_DAS_IMAGENS/slides/Slide(4).jpg"  alt="Vela curativa">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -76,6 +76,7 @@
                     <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
                 </div>
             </div>
             <div class="pt-5 pb-5" >
@@ -114,7 +115,7 @@
                 <div class="row mt-4">
                     <div class="col-md-4">
                         <img src="@@/ENDERECO_DAS_IMAGENS/valores/woman.jpeg" alt="massagem" class="d-block w-100 rounded mb-2">
-                        <h3 class="section-title text-colored fs-4">
+                        <h3 class="section-title fs-4">
                             <i class="bi bi-clipboard2-pulse-fill "></i>
                             Massagem
                         </h3>
@@ -124,7 +125,7 @@
                     </div>
                     <div class="col-md-4">
                         <img src="@@/ENDERECO_DAS_IMAGENS/valores/Kindness.png" alt="aromaterapia" class="d-block w-100 rounded mb-2">
-                        <h3 class="section-title text-colored fs-4">
+                        <h3 class="section-title fs-4">
                             <i class="bi bi-arrow-through-heart-fill"></i>
                             Aromaterapia para pets
                         </h3>
@@ -134,7 +135,7 @@
                     </div>
                     <div class="col-md-4">
                         <img src="@@/ENDERECO_DAS_IMAGENS/valores/Óleos_essenciais.png" alt="óleos essenciais" class="d-block w-100 rounded mb-2">
-                        <h3 class="section-title text-colored fs-4">
+                        <h3 class="section-title fs-4">
                             <i class="bi bi-yin-yang"></i>
                             Meditação
                         </h3>
@@ -156,7 +157,7 @@
                         <nav class="nav nav-pills flex-column nav-produtos">
                             <button type="button" data-bs-toggle="tab" data-bs-target="#difusores" class="fw-bold text-start nav-link custom-link active">Difusores</button>
                             <button type="button" data-bs-toggle="tab" data-bs-target="#velas-aromaticas" class="fw-bold text-start nav-link custom-link">Velas aromáticas</button>
-                            <button type="button" data-bs-toggle="tab" data-bs-target="#agua-lencol" class="fw-bold text-start nav-link custom-link">Água para lencóis</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#agua-lencol" class="fw-bold text-start nav-link custom-link">Água para lençóis</button>
                             <button type="button" data-bs-toggle="tab" data-bs-target="#oleos" class="fw-bold text-start nav-link custom-link">Óleos</button>
                             <button type="button" data-bs-toggle="tab" data-bs-target="#kits" class="fw-bold text-start nav-link custom-link">Kits</button>
                         </nav>
@@ -353,19 +354,19 @@
                     <div class="col-md-7" id="contato">
                         <form>
                             <div class="mb-3">
-                                <label for="nome" class="form-label fw-bold text-colored">Seu nome</label>
+                                <label for="nome" class="form-label fw-bold text-color-primary">Seu nome</label>
                                 <input type="text" id="nome" class="form-control" name="nome">
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label fw-bold text-colored">Seu e-mail</label>
+                                <label for="email" class="form-label fw-bold text-color-primary">Seu e-mail</label>
                                 <input type="email" id="email" class="form-control" name="email">
                             </div>
                             <div class="mb-3">
-                                <label for="telefone" class="form-label fw-bold text-colored">Seu telefone (opcional)</label>
+                                <label for="telefone" class="form-label fw-bold text-color-primary">Seu telefone (opcional)</label>
                                 <input type="tel" id="telefone" class="form-control" name="telefone">
                             </div>
                             <div class="mb-3">
-                                <label for="mensagem" class="form-label fw-bold text-colored">Sua mensagem</label>
+                                <label for="mensagem" class="form-label fw-bold text-color-primary">Sua mensagem</label>
                                 <textarea id="mensagem" class="form-control" style="height: 140px;" name="mensagem"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary fw-bold">Enviar</button>
@@ -373,7 +374,7 @@
                     </div>
                     <div class="col-md-4 ms-md-5">
                         <div class="row">
-                            <h3 class="section-title fs-4 text-colored">
+                            <h3 class="section-title fs-4">
                                 <i class="bi bi-hand-thumbs-up-fill"></i>
                                 Redes sociais
                             </h3>
@@ -396,7 +397,7 @@
                             </ul>
                         </div>
                         <div class="row mt-3 mb-1">
-                            <h3 class="section-title fs-4 text-colored">
+                            <h3 class="section-title fs-4">
                                 <i class="bi bi-cursor-fill"></i>
                                 Endereço
                             </h3>

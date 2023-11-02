@@ -29,17 +29,22 @@ header img {
     color: #colors[colorSecondary];
 }
 
-#sobre-a-loja, #produtos {
-    background-color: #colors[backgroudMid];
-}
-
 .products-item-img {
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
+#sobre-a-loja, #produtos {
+    background-color: #colors[backgroudMid];
+}
+
 #usos, #fale-conosco {
     background-color: #colors[backgroudLight];
+}
+
+.text-color-primary
+{
+    color: #colors[colorSecondary];
 }
 
 .text-colored {
@@ -69,12 +74,10 @@ label.error {
     display: block;
 }
 
-#carousel img {
+.carousel-inner img{
     display: block;
     width: 100%;
-    height: 300px;
-    margin: 0 auto;
-
+    height: 400px;
 }
 
 #rodape {
@@ -92,15 +95,16 @@ label.error {
 
 .nav-pills .nav-link.active {
     background-color: #colors[backgroudLight];
-    color: #colors[textColor3];
+    color: #colors[colorPrimary];
 }
 
 .btn-primary {
     background-color: #colors[textColor1];
-    color: #colors[backgroudMid];
+    color: #colors[colorPrimary];
     border: none;
 
         &:hover {
             background-color: #colors[textColor2];
+            color: #colors[colorPrimary];
         }
 }
