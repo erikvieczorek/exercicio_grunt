@@ -26,13 +26,23 @@ module.exports = function(grunt) {
             }
         },
 
+        copy: {
+
+            images: {
+                expand: true,
+                cwd: 'src/images',
+                src: ['**/*.*'],
+                dest: 'dist/images'
+            }
+        },
+
         image: {
             
             dynamic: {
                 files: [{
                 expand: true,
                 cwd: 'src/images',
-                src: ['**/*.{png,jpg,gif,svg,jpeg}'],
+                src: ['**/*.{png,jpg,gif,svg,jpeg}', '**/*.*'],
                 dest: 'dist/images'
                 }]
             }
@@ -134,10 +144,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-image');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'image', 'clean' , 'uglify']);
+    grunt.registerTask('build', ['less:production', 'copy:images', 'image', 'htmlmin:dist', 'replace:dist', 'clean' , 'uglify']);
 }
 
 
